@@ -1,0 +1,401 @@
+do while loop
+
+public class Main
+{
+ 	public static void main(String[] args) {
+ 	    int a =10;
+ 	    do{
+ 	System.out.println("Hello World");
+ 	    }while (a<10);//exit control loop
+ 
+ 	}
+}
+
+
+public class Main
+{
+ 	public static void main(String[] args) {
+ 	    int a =11;
+ 	    do{
+ 	System.out.println("Hello World");
+ 	    }while (a>10);//exit control loop
+ 
+ 	}
+}
+
+
+
+nested loop
+
+
+public class Main
+{
+ 	public static void main(String[] args) {
+ 	    for (int i=1;i<=5;i++){
+ 	        for (int j=1;j<=5;j++){
+ 	            System.out.println(i+" "+j);
+ 	        }
+ 	    }
+ 	}
+}
+
+
+continue & break:
+
+
+public class Main
+{
+ 	public static void main(String[] args) {
+ 	    for (int i=1;i<=5;i++){
+ 	        if (i==3){
+ 	            continue;
+ 	        }
+ 	    System.out.println("hello");
+ 	}
+}
+
+
+
+public class Main
+{
+ 	public static void main(String[] args) {
+            aa:
+ 	    for (int i=1;i<=5;i++){
+            bb:
+            for (int j=1;j<=5;j++){
+ 	        if (i==3){
+ 	            break aa;
+ 	        }
+ 	    System.out.println(i+" "+j);
+ 	}
+}
+}
+}
+
+
+
+public class Main
+{
+ 	public static void main(String[] args) {
+ 	    for (int i=0,j=0;i<5||j<3;i++,j++){
+ 	    System.out.println(i+" "+j);
+ 	}
+}
+}
+
+public class Main
+{
+ 	public static void main(String[] args) {
+ 	    for (int i=0,j=0;i<5&&j<3;i++,j++){
+ 	    System.out.println(i+" "+j);
+ 	}
+}
+}
+
+
+public class Main
+{
+ 	public static void main(String[] args) {
+ 	    float f = 4.5678f;
+ 	    double d = Math.floor(f*100)/100;
+ 	    System.out.printf("%.2f",d);
+ 	}
+}
+
+
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+    Scanner
+    int n = sc.nextInt();
+    for (int i =2;i*i<=n;i++){
+      if(n%i==0){
+        System.out.println("no");
+        return;
+      }
+    }
+    System.out.println("yes");
+  }
+}
+
+
+reverse the no:
+
+
+import java.util.Scanner;
+public class Main
+{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner(System.in);
+ 		int n = sc.nextInt();
+ 		int rev=0;
+ 		while(n>0){
+ 		    int l = n%10;
+ 		    rev = rev*10+l;
+ 		    n = n/10 ;
+ 		}
+ 		System.out.println(rev);
+ 	}
+}
+
+
+palindrome:
+
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int rev = 0;
+
+        if (n != 0) {
+            while (n != 0) {
+                rev = rev * 10 + n % 10;
+                n = n / 10;
+            }
+        } else {
+            rev = 0;
+        }
+
+        System.out.println(rev);
+        sc.close();
+    }
+}
+
+
+Armstrong no:
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int original = n;
+        int sum = 0;
+
+        while (n != 0) {
+            int digit = n % 10;
+            sum += digit * digit * digit; // cube of each digit
+            n = n / 10;
+        }
+
+        if (sum == original) {
+            System.out.println(original);
+        } else {
+            System.out.println("Not an Armstrong number");
+        }
+
+        sc.close();
+    }
+}
+
+
+ another Method:
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int ans =n;
+        int digit =0;
+        int res=0;
+        while(n>0){
+            n=n/10;
+            digit++;
+        }
+        n= ans;
+        while(n>0){
+            int r=n%10;
+            int mul=1;
+            for(int i=1;i<=digit;i++){
+                mul=mul*r;
+            }
+            res = res+mul;
+            n=n/10;
+ 
+        }
+        System.out.println((res==ans)?"amstrong":"not");
+    }
+}
+
+
+perfect no:
+
+
+import java.util.Scanner;
+public class Main
+{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner (System.in);
+ 		int a = sc.nextInt();
+ 		int sum = 0;
+ 		for (int i =1;i<=a/2;i++){
+ 		    if(a%i==0){
+ 		        sum=sum+i;
+ 		    }
+ 		}
+ 		System.out.println((sum==a)?"perfect":"not perfect");
+ 	}
+}
+
+
+pattern:
+
+
+for loop - straight print
+
+import java.util.Scanner;
+public class Main
+{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner (System.in);
+ 		int a = sc.nextInt();
+ 		for (int row = 0;row<a;row++){
+ 		    for (int col=0;col<=row;col++){
+ 		        System.out.print("*");
+ 		    }
+ 		    System.out.println();
+ 		}
+ 	}
+}
+
+
+pattern reverse:
+
+
+import java.util.Scanner;
+public class Main
+{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner (System.in);
+ 		int a = sc.nextInt();
+ 		for (int row = 0;row<a;row++){
+ 		    for (int col=0;col<a-row;col++){
+ 		        System.out.print("*");
+ 		    }
+ 		    System.out.println();
+ 		}
+ 	}
+}
+
+
+odd
+
+
+import java.util.Scanner;
+public class Main
+{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner (System.in);
+ 		int a = sc.nextInt();
+ 		int t=1;
+ 		for (int row = 0;row<a;row++){
+ 		    for (int col=0;col<t;col++){
+ 		        System.out.print("*");
+ 		    }
+ 		    t=t+2;
+ 		    System.out.println();
+ 		}
+ 	}
+}
+
+
+odd reverse
+
+
+import java.util.Scanner;
+public class Main
+{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner (System.in);
+ 		int a = sc.nextInt();
+ 		int t=2*a-1;
+ 		for (int row = 0;row<a;row++){
+ 		    for (int col=0;col<t;col++){
+ 		        System.out.print("*");
+ 		    }
+ 		    t=t-2;
+ 		    System.out.println();
+ 		}
+ 	}
+}
+
+triangle reverse
+
+import java.util.Scanner;
+public class Main
+{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner (System.in);
+ 		int a = sc.nextInt();
+ 
+ 		for (int row = 0;row<a;row++){
+ 		    for (int col=0;col<row;col++){
+ 		        System.out.print(" ");
+ 		    }
+ 		    for (int col=0;col<a-row;col++){
+ 		        System.out.print("* ");
+ 		    }
+ 
+ 		    System.out.println();
+ 		}
+ 	}
+}
+
+square
+
+import java.util.Scanner;
+public class Main
+{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner (System.in);
+ 		int a = sc.nextInt();
+ 
+ 		for (int row = 0;row<a;row++){
+ 		    for (int col=0;col<a;col++){
+ 		        if(row==0||row==a-1||col==0||col==a-1){
+ 		        System.out.print("* ");
+ 		        }
+ 		        else{
+ 		    System.out.print("  ");
+ 		}
+ 
+ 	}
+ 	System.out.println();
+}
+}
+ 
+}
+
+
+even & odd sum:
+
+import java.util.*;
+public class Main
+{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner(System.in);
+ 		int size = sc.nextInt();
+ 		int arr[] = new int [size];
+ 		int oddsum=0,evensum=0;
+ 		for(int i=0;i<size;i++){
+ 		    arr[i]=sc.nextInt();
+ 		    if(arr[i]%2==0){
+ 		        evensum=evensum+arr[i];
+ 		    }else{
+ 		        oddsum = oddsum+arr[i];
+ 		    }
+ 
+ 		}
+ 		 System.out.print(evensum>oddsum?evensum-oddsum:oddsum+evensum);
+ 	}
+}
